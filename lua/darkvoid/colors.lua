@@ -14,6 +14,7 @@ M.config = {
 
 -- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
+	print("Darkvoid colorscheme setup called") -- Add this line for debugging
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
@@ -21,10 +22,11 @@ function M.setup(user_config)
 	local colors = M.config.colors
 
 	local highlight_groups = {
-		Normal = { guifg = colors.fg, guibg = M.config.transparent and "NONE" or colors.bg },
-		Cursor = { guifg = colors.cursor, guibg = M.config.transparent and "NONE" or colors.bg },
-		LineNr = { guifg = colors.line_nr },
-		Visual = { guibg = colors.visual },
+		Normal = { fg = colors.fg, bg = M.config.transparent and "NONE" or colors.bg },
+		Cursor = { fg = colors.cursor, bg = M.config.transparent and "NONE" or colors.bg },
+		LineNr = { fg = colors.line_nr },
+		Visual = { bg = colors.visual },
+		-- You can add more highlight groups here
 	}
 
 	-- Apply highlight groups
@@ -33,6 +35,7 @@ function M.setup(user_config)
 		for key, value in pairs(config) do
 			cmd = cmd .. key .. "=" .. value .. " "
 		end
+		print(cmd) -- Add this line for debugging
 		vim.cmd(cmd)
 	end
 end
