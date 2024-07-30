@@ -48,6 +48,7 @@ function M.setup(user_config)
 		if config.gui then
 			cmd = cmd .. " gui=" .. config.gui
 		end
+		print("Executing command:", cmd)
 		vim.cmd(cmd)
 	end
 end
