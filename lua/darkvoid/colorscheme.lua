@@ -9,7 +9,6 @@ M.config = {
 		cursor = "#FFFF00",
 		line_nr = "#404040",
 		visual = "#444444",
-		-- Add more color definitions here
 	},
 }
 

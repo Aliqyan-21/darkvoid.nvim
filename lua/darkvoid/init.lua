@@ -1,3 +1,1 @@
-local M = require("darkvoid.config").setup()
-
-return M
+return require("darkvoid.config")
