@@ -1,14 +1,21 @@
 local M = {}
 
+-- Default configuration
 M.config = {
 	transparent = false,
-	glow = true,
+	glow = false, -- Add glow option
 	colors = {
 		fg = "#C0C0C0",
 		bg = "#1C1C1C",
 		cursor = "#FFFF00",
 		line_nr = "#404040",
 		visual = "#303030",
+		comment = "#585858",
+		string = "#D1D1D1",
+		func = "#E1E1E1",
+		kw = "#F1F1F1",
+		identifier = "#B1B1B1",
+		type = "#A1A1A1",
 	},
 }
 
@@ -26,21 +33,19 @@ function M.setup(user_config)
 		LineNr = { fg = colors.line_nr },
 		Visual = { bg = colors.visual },
 		-- Extended highlight groups
-		Comment = { fg = "#585858", gui = "italic" },
-		String = { fg = "#A3BE8C" },
-		Function = { fg = "#88C0D0" },
-		Keyword = { fg = "#BF616A" },
-		Identifier = { fg = "#D08770" },
-		Type = { fg = "#B48EAD" },
+		Comment = { fg = colors.comment, gui = "italic" },
+		String = { fg = colors.string },
+		Function = { fg = colors.func },
+		Keyword = { fg = colors.kw },
+		Identifier = { fg = colors.identifier },
+		Type = { fg = colors.type },
 		-- Add more highlight groups as needed
 	}
 
 	-- Function to apply glow effect
-	local function apply_glow(group_name)
+	local function apply_glow(group_name, config)
 		if M.config.glow then
-			vim.cmd(
-				"highlight " .. group_name .. " guibg=" .. colors.bg .. " guifg=" .. colors.fg .. " gui=bold,undercurl"
-			)
+			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold,undercurl")
 		end
 	end
 
@@ -60,7 +65,7 @@ function M.setup(user_config)
 
 		-- Apply glow effect to important groups
 		if M.config.glow and (group_name == "Function" or group_name == "Keyword" or group_name == "Identifier") then
-			apply_glow(group_name)
+			apply_glow(group_name, config)
 		end
 	end
 end
