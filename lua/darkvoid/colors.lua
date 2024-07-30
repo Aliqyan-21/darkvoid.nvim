@@ -50,6 +50,21 @@ function M.setup(user_config)
 		-- Add more highlight groups as needed
 	}
 
+	-- Additional groups to cover curly brackets
+	local additional_bracket_groups = {
+		"CurlyBrace",
+		"CurlyBracket",
+		"Brace",
+		"PunctuationBracket",
+		"PunctuationBrace",
+		"PunctuationCurlyBrace",
+	}
+
+	-- Add additional bracket groups to highlight_groups
+	for _, group in ipairs(additional_bracket_groups) do
+		highlight_groups[group] = { fg = colors.bracket }
+	end
+
 	-- Function to apply glow effect
 	local function apply_glow(group_name, config)
 		if M.config.glow then
@@ -81,6 +96,8 @@ function M.setup(user_config)
 				or group_name == "Keyword"
 				or group_name == "Identifier"
 				or group_name == "Operator"
+				or group_name == "Delimiter"
+				or vim.tbl_contains(additional_bracket_groups, group_name)
 			)
 		then
 			apply_glow(group_name, config)
