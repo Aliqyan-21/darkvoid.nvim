@@ -93,14 +93,16 @@ function M.setup(user_config)
 		VertSplit = { fg = colors.vert_split },
 		WarningMsg = { fg = colors.warning_msg, bg = "yellow" },
 		WildMenu = { fg = colors.wild_menu },
-		-- Link additional groups
-		Constant = { link = "Normal" },
-		Identifier = { link = "Normal" },
-		Statement = { link = "Normal" },
-		PreProc = { link = "Normal" },
-		Type = { link = "Normal" },
-		Special = { link = "Normal" },
-		ModeMsg = { link = "MoreMsg" },
+	}
+
+	local link_groups = {
+		Constant = "Normal",
+		Identifier = "Normal",
+		Statement = "Normal",
+		PreProc = "Normal",
+		Type = "Normal",
+		Special = "Normal",
+		ModeMsg = "MoreMsg",
 	}
 
 	-- Apply highlight groups
@@ -115,10 +117,12 @@ function M.setup(user_config)
 		if config.gui then
 			cmd = cmd .. " gui=" .. config.gui
 		end
-		if config.link then
-			cmd = cmd .. " link=" .. config.link
-		end
 		vim.cmd(cmd)
+	end
+
+	-- Apply link groups
+	for group_name, link_to in pairs(link_groups) do
+		vim.cmd("highlight link " .. group_name .. " " .. link_to)
 	end
 end
 
