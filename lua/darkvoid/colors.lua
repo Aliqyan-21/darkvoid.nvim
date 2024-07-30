@@ -1,3 +1,4 @@
+-- lua/darkvoid/colors.lua
 local M = {}
 
 -- Default configuration
@@ -14,7 +15,7 @@ M.config = {
 
 -- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
-	print("Darkvoid colorscheme setup called") -- Add this line for debugging
+	print("Darkvoid colorscheme setup called") -- Debug statement
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
@@ -26,7 +27,14 @@ function M.setup(user_config)
 		Cursor = { fg = colors.cursor, bg = M.config.transparent and "NONE" or colors.bg },
 		LineNr = { fg = colors.line_nr },
 		Visual = { bg = colors.visual },
-		-- You can add more highlight groups here
+		-- Extended highlight groups
+		Comment = { fg = "#888888", italic = true },
+		String = { fg = "#A3BE8C" },
+		Function = { fg = "#88C0D0" },
+		Keyword = { fg = "#BF616A" },
+		Identifier = { fg = "#D08770" },
+		Type = { fg = "#B48EAD" },
+		-- Add more highlight groups as needed
 	}
 
 	-- Apply highlight groups
@@ -35,7 +43,7 @@ function M.setup(user_config)
 		for key, value in pairs(config) do
 			cmd = cmd .. key .. "=" .. value .. " "
 		end
-		print(cmd) -- Add this line for debugging
+		print(cmd) -- Debug statement
 		vim.cmd(cmd)
 	end
 end
