@@ -16,9 +16,9 @@ M.config = {
 		kw = "#F1F1F1", -- Renamed from 'keyword' to 'kw'
 		identifier = "#B1B1B1",
 		type = "#A1A1A1",
-		search_highlight = "#1bfd9c", -- Color for search highlights
-		operator = "#1bfd9c", -- Color for operators like '='
-		bracket = "#E6E6E6", -- Color for brackets
+		search_highlight = "#1bfd9c",
+		operator = "#1bfd9c",
+		bracket = "#E6E6E6",
 	},
 }
 
@@ -58,6 +58,7 @@ function M.setup(user_config)
 		"PunctuationBracket",
 		"PunctuationBrace",
 		"PunctuationCurlyBrace",
+		"punctuation.bracket.curly", -- This is for Tree-sitter
 	}
 
 	-- Add additional bracket groups to highlight_groups
