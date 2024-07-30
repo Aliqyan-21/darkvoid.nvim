@@ -1,14 +1,14 @@
 local M = {}
 
--- Default configuration
 M.config = {
 	transparent = false,
+	glow = true,
 	colors = {
 		fg = "#C0C0C0",
 		bg = "#1C1C1C",
 		cursor = "#FFFF00",
 		line_nr = "#404040",
-		visual = "#444444",
+		visual = "#303030",
 	},
 }
 
@@ -26,7 +26,7 @@ function M.setup(user_config)
 		LineNr = { fg = colors.line_nr },
 		Visual = { bg = colors.visual },
 		-- Extended highlight groups
-		Comment = { fg = "#888888", gui = "italic" },
+		Comment = { fg = "#585858", gui = "italic" },
 		String = { fg = "#A3BE8C" },
 		Function = { fg = "#88C0D0" },
 		Keyword = { fg = "#BF616A" },
@@ -34,6 +34,15 @@ function M.setup(user_config)
 		Type = { fg = "#B48EAD" },
 		-- Add more highlight groups as needed
 	}
+
+	-- Function to apply glow effect
+	local function apply_glow(group_name)
+		if M.config.glow then
+			vim.cmd(
+				"highlight " .. group_name .. " guibg=" .. colors.bg .. " guifg=" .. colors.fg .. " gui=bold,undercurl"
+			)
+		end
+	end
 
 	-- Apply highlight groups
 	for group_name, config in pairs(highlight_groups) do
@@ -48,6 +57,11 @@ function M.setup(user_config)
 			cmd = cmd .. " gui=" .. config.gui
 		end
 		vim.cmd(cmd)
+
+		-- Apply glow effect to important groups
+		if M.config.glow and (group_name == "Function" or group_name == "Keyword" or group_name == "Identifier") then
+			apply_glow(group_name)
+		end
 	end
 end
 
