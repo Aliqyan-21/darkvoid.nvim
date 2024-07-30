@@ -7,15 +7,17 @@ M.config = {
 	colors = {
 		fg = "#C0C0C0",
 		bg = "#1C1C1C",
-		cursor = "#82E0AA",
+		cursor = "#FFFF00",
 		line_nr = "#404040",
 		visual = "#303030",
 		comment = "#585858",
-		string = "#D1D1D1",
-		func = "#E1E1E1",
-		kw = "#F1F1F1",
+		string = "#D1D1D1", -- More monochromatic
+		func = "#E1E1E1", -- Renamed from 'function' to 'func'
+		kw = "#F1F1F1", -- Renamed from 'keyword' to 'kw'
 		identifier = "#B1B1B1",
 		type = "#A1A1A1",
+		search_highlight = "#82E0AA", -- Color for search highlights
+		operator = "#82E0AA", -- Color for operators like '='
 	},
 }
 
@@ -39,6 +41,10 @@ function M.setup(user_config)
 		Keyword = { fg = colors.kw },
 		Identifier = { fg = colors.identifier },
 		Type = { fg = colors.type },
+		-- Add specific highlight groups
+		Search = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
+		IncSearch = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
+		Operator = { fg = colors.operator },
 		-- Add more highlight groups as needed
 	}
 
