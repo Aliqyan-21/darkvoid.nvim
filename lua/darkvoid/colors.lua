@@ -18,6 +18,7 @@ M.config = {
 		type = "#A1A1A1",
 		search_highlight = "#1bfd9c", -- Color for search highlights
 		operator = "#1bfd9c", -- Color for operators like '='
+		bracket = "#E6E6E6", -- Color for brackets
 	},
 }
 
@@ -45,6 +46,7 @@ function M.setup(user_config)
 		Search = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		IncSearch = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		Operator = { fg = colors.operator },
+		Delimiter = { fg = colors.bracket }, -- Add bracket highlight group
 		-- Add more highlight groups as needed
 	}
 
