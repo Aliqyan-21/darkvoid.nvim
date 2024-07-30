@@ -48,6 +48,7 @@ M.config = {
 
 -- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
+	print("Setting up darkvoid colorscheme")
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
@@ -117,12 +118,15 @@ function M.setup(user_config)
 		if config.gui then
 			cmd = cmd .. " gui=" .. config.gui
 		end
+		print("Applying highlight: " .. cmd) -- Debug print
 		vim.cmd(cmd)
 	end
 
 	-- Apply link groups
 	for group_name, link_to in pairs(link_groups) do
-		vim.cmd("highlight link " .. group_name .. " " .. link_to)
+		local link_cmd = "highlight link " .. group_name .. " " .. link_to
+		print("Applying link: " .. link_cmd) -- Debug print
+		vim.cmd(link_cmd)
 	end
 end
 
