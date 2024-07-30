@@ -52,10 +52,12 @@ require('darkvoid').setup({
 ## Supported Plugins
 Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, support for popular plugins is still in progress. The following plugins are planned for support:
 
-- nvim-tree: File explorer integration
-- treesitter: Enhanced syntax highlighting
-- telescope: Fuzzy finder integration
-- gitsigns: Git integration and signs
+- [ ] nvim-tree: File explorer integration
+- [ ] treesitter: Enhanced syntax highlighting
+- [ ] telescope: Fuzzy finder integration
+- [ ] gitsigns: Git integration and signs
+
+... You can update readme to add more famous plugins
 
 I welcome contributions from the community to help integrate support for these plugins. If you are interested in contributing, please refer to the Contributing Guidelines section below.
 
