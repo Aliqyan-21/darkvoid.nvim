@@ -28,7 +28,7 @@ function M.setup(user_config)
 		LineNr = { fg = colors.line_nr },
 		Visual = { bg = colors.visual },
 		-- Extended highlight groups
-		Comment = { fg = "#888888", italic = true },
+		Comment = { fg = "#888888", gui = "italic" },
 		String = { fg = "#A3BE8C" },
 		Function = { fg = "#88C0D0" },
 		Keyword = { fg = "#BF616A" },
@@ -39,9 +39,15 @@ function M.setup(user_config)
 
 	-- Apply highlight groups
 	for group_name, config in pairs(highlight_groups) do
-		local cmd = "highlight " .. group_name .. " "
-		for key, value in pairs(config) do
-			cmd = cmd .. key .. "=" .. value .. " "
+		local cmd = "highlight " .. group_name
+		if config.fg then
+			cmd = cmd .. " guifg=" .. config.fg
+		end
+		if config.bg then
+			cmd = cmd .. " guibg=" .. config.bg
+		end
+		if config.gui then
+			cmd = cmd .. " gui=" .. config.gui
 		end
 		print(cmd) -- Debug statement
 		vim.cmd(cmd)
