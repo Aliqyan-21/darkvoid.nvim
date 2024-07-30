@@ -51,7 +51,9 @@ function M.setup(user_config)
 	-- Function to apply glow effect
 	local function apply_glow(group_name, config)
 		if M.config.glow then
-			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold,undercurl")
+			vim.cmd(
+				"highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold,undercurl guisp=" .. colors.operator
+			)
 		end
 	end
 
@@ -70,7 +72,15 @@ function M.setup(user_config)
 		vim.cmd(cmd)
 
 		-- Apply glow effect to important groups
-		if M.config.glow and (group_name == "Function" or group_name == "Keyword" or group_name == "Identifier") then
+		if
+			M.config.glow
+			and (
+				group_name == "Function"
+				or group_name == "Keyword"
+				or group_name == "Identifier"
+				or group_name == "Operator"
+			)
+		then
 			apply_glow(group_name, config)
 		end
 	end
