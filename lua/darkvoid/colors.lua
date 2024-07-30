@@ -1,7 +1,5 @@
 local M = {}
 
-print("darkvoid colorscheme loaded") -- test
-
 -- Default configuration
 M.config = {
 	transparent = false,
