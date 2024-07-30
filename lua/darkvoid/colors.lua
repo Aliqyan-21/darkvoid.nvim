@@ -15,7 +15,6 @@ M.config = {
 
 -- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
-	print("Darkvoid colorscheme setup called") -- Debug statement
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
@@ -49,7 +48,6 @@ function M.setup(user_config)
 		if config.gui then
 			cmd = cmd .. " gui=" .. config.gui
 		end
-		print(cmd) -- Debug statement
 		vim.cmd(cmd)
 	end
 end
