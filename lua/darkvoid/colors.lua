@@ -59,6 +59,14 @@ function M.setup(user_config)
 		"PunctuationBrace",
 		"PunctuationCurlyBrace",
 		"punctuation.bracket.curly", -- This is for Tree-sitter
+		-- More specific Tree-sitter groups
+		"TSConstructor",
+		"TSPunctDelimiter",
+		"TSPunctBracket",
+		"TSPunctSpecial",
+		"TSKeywordOperator",
+		"TSField",
+		"TSProperty",
 	}
 
 	-- Add additional bracket groups to highlight_groups
