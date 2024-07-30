@@ -25,7 +25,6 @@ function M.setup(user_config)
 		Cursor = { guifg = colors.cursor, guibg = M.config.transparent and "NONE" or colors.bg },
 		LineNr = { guifg = colors.line_nr },
 		Visual = { guibg = colors.visual },
-		-- You can add more highlight groups here
 	}
 
 	-- Apply highlight groups
@@ -36,8 +35,6 @@ function M.setup(user_config)
 		end
 		vim.cmd(cmd)
 	end
-
-	-- ... other setup logic (if needed)
 end
 
 return M
