@@ -16,8 +16,8 @@ M.config = {
 		kw = "#F1F1F1", -- Renamed from 'keyword' to 'kw'
 		identifier = "#B1B1B1",
 		type = "#A1A1A1",
-		search_highlight = "#82E0AA", -- Color for search highlights
-		operator = "#82E0AA", -- Color for operators like '='
+		search_highlight = "#1bfd9c", -- Color for search highlights
+		operator = "#1bfd9c", -- Color for operators like '='
 	},
 }
 
