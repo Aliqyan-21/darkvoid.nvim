@@ -1,7 +1,14 @@
 local M = {}
 
 -- Default configuration
-M.config = {}
+M.config = {
+	plugins = {
+		gitsigns = true,
+		treesitter = true,
+		-- telescope = true,
+		-- nvim_tree = true,
+	},
+}
 
 -- Load plugin support
 local function load_plugins()

@@ -5,4 +5,4 @@ local config = require("darkvoid.config")
 colors.setup()
 
 -- Load plugin configurations
-config.setup()
+config.setup({})
