@@ -12,6 +12,8 @@ M.setup = function()
 		NvimTreeSymlink = { fg = colors.string, bg = "NONE" },
 		NvimTreeSpecialFile = { fg = colors.operator, bg = "NONE", gui = "bold" },
 		NvimTreeWindowPicker = { fg = colors.bg, bg = colors.search_highlight, gui = "bold" },
+		NvimTreeLineNr = { fg = colors.line_nr, bg = "NONE" },
+		NvimTreeCursorLineNr = { fg = colors.cursor, bg = "NONE", gui = "bold" },
 	}
 
 	for group_name, config in pairs(highlight_groups) do
