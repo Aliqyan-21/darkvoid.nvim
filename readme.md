@@ -56,6 +56,9 @@ require('darkvoid').setup({
 })
 ```
 
+## Preview Images
+click here - [screenshots](preview/preview.md) 
+
 ## Supported Plugins
 Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, support for popular plugins is still in progress. The following plugins are planned for support:
 
