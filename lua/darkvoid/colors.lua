@@ -7,7 +7,7 @@ M.config = {
 	colors = {
 		fg = "#c0c0c0",
 		bg = "#1c1c1c",
-		cursor = "#ffff00",
+		cursor = "#bdfe58",
 		line_nr = "#404040",
 		visual = "#303030",
 		comment = "#585858",
@@ -27,6 +27,11 @@ M.config = {
 		added = "#baffc9",
 		changed = "#ffffba",
 		removed = "#ffb3ba",
+
+		-- Pmenu colors
+		pmenu_bg = "#1c1c1c",
+		pmenu_sel_bg = "#1bfd9c",
+		pmenu_fg = "#c0c0c0",
 	},
 }
 
@@ -58,6 +63,9 @@ function M.setup(user_config)
 		IncSearch = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		Operator = { fg = colors.operator },
 		Delimiter = { fg = colors.bracket },
+
+		Pmenu = { fg = colors.pmenu_fg, bg = colors.pmenu_bg },
+		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
 	}
 
 	-- Function to apply glow effect
