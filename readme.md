@@ -31,7 +31,7 @@ return {'aliqyan-21/darkvoid.nvim'}
 ```
 
 ## Configuration
-This is how you can configure `darkvoid.nvim` - [Configuration]() 
+This is how you can configure `darkvoid.nvim` - [Configuration](config.md) 
 
 ## Colorscheme Preview
 
