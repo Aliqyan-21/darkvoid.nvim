@@ -5,9 +5,9 @@ M.setup = function()
 
 	-- Define GitSigns highlight groups
 	local highlight_groups = {
-		GitSignsAdd = { fg = colors.added },
-		GitSignsChange = { fg = colors.changed },
-		GitSignsDelete = { fg = colors.removed },
+		GitSignsAdd = { fg = colors.added, bg = "NONE" },
+		GitSignsChange = { fg = colors.changed, bg = "NONE" },
+		GitSignsDelete = { fg = colors.removed, bg = "NONE" },
 	}
 
 	-- Apply the highlight groups
