@@ -19,9 +19,10 @@ M.config = {
 		search_highlight = "#1bfd9c",
 		operator = "#1bfd9c",
 		bracket = "#E6E6E6",
-		added = "#baffc9", -- Color for added lines in GitSigns
-		changed = "#ffffba", -- Color for changed lines in GitSigns
-		removed = "#ffb3ba", -- Color for removed lines in GitSigns
+		-- gitsigns colors
+		added = "#baffc9",
+		changed = "#ffffba",
+		removed = "#ffb3ba",
 	},
 }
 
