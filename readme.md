@@ -1,11 +1,18 @@
 # Darkvoid.nvim
 
-**Darkvoid.nvim** is a visually stunning and customizable colorscheme for Neovim, designed to offer a warm, classic aesthetic with a unique `glow effect`. This colorscheme focuses on highlighting important code elements and provides a monochromatic color palette that enhances readability and reduces eye strain.
+Have you ever been in a dark room coding by yourself in that dark void with only glow coming from your pc which is the 
+only important thing right now, this colorscheme is inspired by that, it's like the deep ocean darkvoid where the only glowing things 
+are the alien creature living there, it's like a deep cave darkvoid where the glow is coming 
+out of the mushrooms while exploring...Aah the scenery!
+
+**Darkvoid.nvim** is same, where only important stuff, that is, your code is highlighted and if you want, you can make it glow!
 
 ## Features
 
-- **Monochromatic Palette**: Emphasizes a warm, classic feeling with carefully selected monochromatic colors.
+- **Monochromatic Palette**: Carefully selected monochromatic colors to go easy on your eyes and not give too much to take.
+
 - **Glow Effect**: Optional glow effect for key syntax elements like functions, keywords, and operators.
+
 - **Customizable**: Easily configure transparency, glow effect, and color settings to suit your preferences.
 
 ## Installation
@@ -59,7 +66,7 @@ Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, sup
 - [ ] bufferline: buffer tabs
 - [ ] lualine: lualine support
 
-... You can update readme to add more famous plugins
+... You can add support for other plugins not in list and I will update readme
 
 I welcome contributions from the community to help integrate support for these plugins. If you are interested in contributing, please refer to the Contributing Guidelines section below.
 
