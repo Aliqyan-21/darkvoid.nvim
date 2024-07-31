@@ -1,5 +1,8 @@
 local M = {}
 
+-- Default configuration
+M.config = {}
+
 -- Load plugin support
 local function load_plugins()
 	local plugins = {
