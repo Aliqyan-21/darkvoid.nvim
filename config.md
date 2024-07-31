@@ -4,24 +4,37 @@ You can configure **darkvoid.nvim** by setting up the colorscheme in your way an
 
 ```
 require('darkvoid').setup({
-    transparent = false,  -- Set to true for a transparent background
-    glow = false,         -- Set to true to enable glow effect
-    colors = {
-        fg = "#C0C0C0",
-        bg = "#1C1C1C",
-        cursor = "#FFFF00",
-        line_nr = "#404040",
-        visual = "#303030",
-        comment = "#585858",
-        string = "#D1D1D1",
-        func = "#E1E1E1",
-        kw = "#F1F1F1",
-        identifier = "#B1B1B1",
-        type = "#A1A1A1",
-        search_highlight = "#1bfd9c",
-        operator = "#1bfd9c",
-        bracket = "#E6E6E6",
-    }
+	transparent = false, -- set true for transparent
+	glow = false, set true for glow effect
+	colors = {
+		fg = "#c0c0c0",
+		bg = "#1c1c1c",
+		cursor = "#bdfe58",
+		line_nr = "#404040",
+		visual = "#303030",
+		comment = "#585858",
+		string = "#d1d1d1",
+		func = "#e1e1e1",
+		kw = "#f1f1f1",
+		identifier = "#b1b1b1",
+		type = "#a1a1a1",
+		search_highlight = "#1bfd9c",
+		operator = "#1bfd9c",
+		bracket = "#e6e6e6",
+		preprocessor = "#4b8902",
+		bool = "#66b2b2",
+		constant = "#b2d8d8",
+
+		-- gitsigns colors
+		added = "#baffc9",
+		changed = "#ffffba",
+		removed = "#ffb3ba",
+
+		-- Pmenu colors
+		pmenu_bg = "#1c1c1c",
+		pmenu_sel_bg = "#1bfd9c",
+		pmenu_fg = "#c0c0c0",
+	},
 })
 
 ```
