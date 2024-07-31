@@ -20,8 +20,8 @@ M.config = {
 		operator = "#1bfd9c",
 		bracket = "#e6e6e6",
 		preprocessor = "#004d24",
-		bool = "#008080",
-		constant = "#66b2b2",
+		bool = "#66b2b2",
+		constant = "#b2d8d8",
 
 		-- gitsigns colors
 		added = "#baffc9",
