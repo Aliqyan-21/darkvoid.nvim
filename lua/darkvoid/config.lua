@@ -3,13 +3,13 @@ local M = {}
 -- Default configuration
 M.config = {}
 
--- Load plugin support
+-- plugin support loading
 local function load_plugins()
 	local plugins = {
 		"gitsigns",
 		"treesitter",
 		"nvimtree",
-		-- Add more plugins here as needed
+		-- more plugins will be added
 	}
 
 	for _, plugin in ipairs(plugins) do
@@ -22,12 +22,11 @@ local function load_plugins()
 	end
 end
 
--- Apply the colorscheme
+-- Apply colorscheme
 function M.setup(user_config)
-	-- Load user configuration
+	-- user config
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
-	-- Load plugin configurations
 	load_plugins()
 end
 

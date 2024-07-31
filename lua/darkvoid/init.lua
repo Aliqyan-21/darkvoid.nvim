@@ -1,10 +1,10 @@
 local M = {}
 
 M.setup = function(user_config)
-	-- Apply the colorscheme
+	-- for colorscheme
 	require("darkvoid.colors").setup(user_config)
 
-	-- Load plugin configurations
+	-- for config
 	require("darkvoid.config").setup(user_config)
 end
 
