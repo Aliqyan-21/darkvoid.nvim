@@ -1,13 +1,10 @@
 local M = {}
 
--- Default configuration
-M.config = {}
-
 -- Load plugin support
 local function load_plugins()
 	local plugins = {
 		"gitsigns",
-		-- "treesitter",
+		"treesitter",
 		-- "telescope",
 		-- "nvim-tree",
 	}
@@ -22,13 +19,10 @@ local function load_plugins()
 	end
 end
 
--- Apply the configuration
+-- Apply the colorscheme
 function M.setup(user_config)
-	-- Ensure user_config is a table
-	user_config = user_config or {}
-
 	-- Load user configuration
-	M.config = vim.tbl_deep_extend("force", M.config, user_config)
+	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
 	-- Load plugin configurations
 	load_plugins()
