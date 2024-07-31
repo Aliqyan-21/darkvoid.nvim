@@ -19,7 +19,7 @@ M.config = {
 		search_highlight = "#1bfd9c",
 		operator = "#1bfd9c",
 		bracket = "#e6e6e6",
-		preprocessor = "#004d24",
+		preprocessor = "#4b8902",
 		bool = "#66b2b2",
 		constant = "#b2d8d8",
 
