@@ -1,8 +1,6 @@
 local M = {}
 
 M.setup = function()
-	print("Loading GitSigns configuration...")
-
 	local colors = require("darkvoid.colors").config.colors
 
 	local highlight_groups = {
@@ -21,8 +19,6 @@ M.setup = function()
 		end
 		vim.cmd(cmd)
 	end
-
-	print("GitSigns configuration applied.")
 end
 
 return M
