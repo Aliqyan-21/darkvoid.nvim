@@ -3,6 +3,8 @@ local M = {}
 M.setup = function()
 	local colors = require("darkvoid.colors").config.colors
 
+	print("Gitsigns running")
+
 	-- Define GitSigns highlight groups
 	local highlight_groups = {
 		GitSignsAdd = { fg = colors.added, bg = "NONE" },
@@ -16,6 +18,7 @@ M.setup = function()
 		if config.fg then
 			cmd = cmd .. " guifg=" .. config.fg
 		end
+		print("Gitsigns cmd " .. cmd)
 		vim.cmd(cmd)
 	end
 end
