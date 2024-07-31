@@ -8,7 +8,8 @@ local function load_plugins()
 	local plugins = {
 		"gitsigns",
 		"treesitter",
-		-- other plugins
+		"nvimtree",
+		-- Add more plugins here as needed
 	}
 
 	for _, plugin in ipairs(plugins) do
