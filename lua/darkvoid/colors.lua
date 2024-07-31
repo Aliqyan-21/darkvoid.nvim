@@ -51,15 +51,12 @@ function M.setup(user_config)
 		IncSearch = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		Operator = { fg = colors.operator },
 		Delimiter = { fg = colors.bracket }, -- Add bracket highlight group
-		-- Add more highlight groups as needed
 	}
 
 	-- Function to apply glow effect
 	local function apply_glow(group_name, config)
 		if M.config.glow then
-			vim.cmd(
-				"highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold,undercurl guisp=" .. colors.operator
-			)
+			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold guisp=" .. colors.operator)
 		end
 	end
 
