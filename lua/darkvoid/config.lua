@@ -1,22 +1,14 @@
 local M = {}
 
 -- Default configuration
-M.config = {
-	plugins = {
-		gitsigns = true,
-		treesitter = true,
-		-- telescope = true,
-		-- nvim_tree = true,
-	},
-}
+M.config = {}
 
 -- Load plugin support
 local function load_plugins()
 	local plugins = {
 		"gitsigns",
 		"treesitter",
-		-- "telescope",
-		-- "nvim-tree",
+		-- other plugins
 	}
 
 	for _, plugin in ipairs(plugins) do
