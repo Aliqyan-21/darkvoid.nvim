@@ -31,33 +31,30 @@ return {'aliqyan-21/darkvoid.nvim'}
 ```
 
 ## Configuration
-You can configure darkvoid.nvim by setting up the colorscheme in your way and configuring it like this:
+This is how you can configure `darkvoid.nvim` - [Configuration]() 
 
-```
-require('darkvoid').setup({
-    transparent = false,  -- Set to true for a transparent background
-    glow = false,         -- Set to true to enable glow effect
-    colors = {
-        fg = "#C0C0C0",
-        bg = "#1C1C1C",
-        cursor = "#FFFF00",
-        line_nr = "#404040",
-        visual = "#303030",
-        comment = "#585858",
-        string = "#D1D1D1",
-        func = "#E1E1E1",
-        kw = "#F1F1F1",
-        identifier = "#B1B1B1",
-        type = "#A1A1A1",
-        search_highlight = "#1bfd9c",
-        operator = "#1bfd9c",
-        bracket = "#E6E6E6",
-    }
-})
-```
+## Colorscheme Preview
 
-## Preview Images
-click here - [screenshots](preview/preview.md) 
+### Transparency off, Glow off 
+![tfgf](tfgf.png) 
+
+### Transparency off, Glow on 
+![tfgf](tfgt.png) 
+
+### Transparency on, Glow off 
+![tfgf](ttgf.png) 
+
+### Transparency on, Glow on 
+![tfgf](ttgt.png) 
+
+### Search Highlighting
+![tfgf](search_highlighting.png) 
+
+### NvimTree
+![tfgf](nvimtree(tf).png) 
+
+### NvimTree (transparent)
+![tfgf](nvimtree(tt).png) 
 
 ## Supported Plugins
 Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, support for popular plugins is still in progress. The following plugins are planned for support:
