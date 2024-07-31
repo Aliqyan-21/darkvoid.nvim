@@ -36,25 +36,25 @@ This is how you can configure `darkvoid.nvim` - [Configuration]()
 ## Colorscheme Preview
 
 ### Transparency off, Glow off 
-![tfgf](tfgf.png) 
+![tfgf](preview/tfgf.png) 
 
 ### Transparency off, Glow on 
-![tfgf](tfgt.png) 
+![tfgf](preview/tfgt.png) 
 
 ### Transparency on, Glow off 
-![tfgf](ttgf.png) 
+![tfgf](preview/ttgf.png) 
 
 ### Transparency on, Glow on 
-![tfgf](ttgt.png) 
+![tfgf](preview/ttgt.png) 
 
 ### Search Highlighting
-![tfgf](search_highlighting.png) 
+![tfgf](preview/search_highlighting.png) 
 
 ### NvimTree
-![tfgf](nvimtree(tf).png) 
+![tfgf](preview/nvimtree(tf).png) 
 
 ### NvimTree (transparent)
-![tfgf](nvimtree(tt).png) 
+![tfgf](preview/nvimtree(tt).png) 
 
 ## Supported Plugins
 Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, support for popular plugins is still in progress. The following plugins are planned for support:
