@@ -5,20 +5,23 @@ M.config = {
 	transparent = false,
 	glow = false, -- Add glow option
 	colors = {
-		fg = "#C0C0C0",
-		bg = "#1C1C1C",
-		cursor = "#FFFF00",
+		fg = "#c0c0c0",
+		bg = "#1c1c1c",
+		cursor = "#ffff00",
 		line_nr = "#404040",
 		visual = "#303030",
 		comment = "#585858",
-		string = "#D1D1D1",
-		func = "#E1E1E1",
-		kw = "#F1F1F1",
-		identifier = "#B1B1B1",
-		type = "#A1A1A1",
+		string = "#d1d1d1",
+		func = "#e1e1e1",
+		kw = "#f1f1f1",
+		identifier = "#b1b1b1",
+		type = "#a1a1a1",
 		search_highlight = "#1bfd9c",
 		operator = "#1bfd9c",
-		bracket = "#E6E6E6",
+		bracket = "#e6e6e6",
+		preprocessor = "#004d24",
+		bool = "#008080",
+		constant = "#66b2b2",
 
 		-- gitsigns colors
 		added = "#baffc9",
@@ -27,11 +30,12 @@ M.config = {
 	},
 }
 
+-- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
-	-- user configuration merging with default
+	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
-	-- Defining colors and highlight groups (using updated config)
+	-- Define colors and highlight groups (using updated config)
 	local colors = M.config.colors
 
 	local highlight_groups = {
@@ -46,21 +50,24 @@ function M.setup(user_config)
 		Keyword = { fg = colors.kw },
 		Identifier = { fg = colors.identifier },
 		Type = { fg = colors.type },
+		PreProc = { fg = colors.preprocessor },
+		Boolean = { fg = colors.bool },
+		Constant = { fg = colors.constant },
 
 		Search = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		IncSearch = { fg = colors.search_highlight, bg = colors.bg, gui = "bold" },
 		Operator = { fg = colors.operator },
-		Delimiter = { fg = colors.bracket }, -- Add bracket highlight group
+		Delimiter = { fg = colors.bracket },
 	}
 
-	-- Glow Effect Function --
+	-- Function to apply glow effect
 	local function apply_glow(group_name, config)
 		if M.config.glow then
 			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold guisp=" .. colors.operator)
 		end
 	end
 
-	-- highlight groups
+	-- Apply highlight groups
 	for group_name, config in pairs(highlight_groups) do
 		local cmd = "highlight " .. group_name
 		if config.fg then
@@ -74,7 +81,7 @@ function M.setup(user_config)
 		end
 		vim.cmd(cmd)
 
-		-- glow effect to important groups
+		-- Apply glow effect to important groups
 		if
 			M.config.glow
 			and (
