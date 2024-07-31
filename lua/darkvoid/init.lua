@@ -1,7 +1,8 @@
-local M = {}
+local colors = require("darkvoid.colors")
 
-M.setup = function(user_config)
-	require("darkvoid.colors").setup(user_config)
-end
+-- Apply the colorscheme
+colors.setup()
 
-return M
+-- Load plugin configurations
+local config = require("darkvoid.config")
+config.setup()
