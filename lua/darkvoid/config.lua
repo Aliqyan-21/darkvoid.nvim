@@ -1,5 +1,8 @@
 local M = {}
 
+-- Default configuration
+M.config = {}
+
 -- Load plugin support
 local function load_plugins()
 	local plugins = {
@@ -19,10 +22,13 @@ local function load_plugins()
 	end
 end
 
--- Apply the colorscheme
+-- Apply the configuration
 function M.setup(user_config)
+	-- Ensure user_config is a table
+	user_config = user_config or {}
+
 	-- Load user configuration
-	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
+	M.config = vim.tbl_deep_extend("force", M.config, user_config)
 
 	-- Load plugin configurations
 	load_plugins()
