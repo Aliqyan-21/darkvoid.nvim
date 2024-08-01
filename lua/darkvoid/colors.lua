@@ -3,7 +3,9 @@ local M = {}
 -- Default configuration
 M.config = {
 	transparent = false,
-	glow = false, -- Add glow option
+	glow = false,
+	show_end_of_buffer = true,
+
 	colors = {
 		fg = "#c0c0c0",
 		bg = "#1c1c1c",
@@ -32,6 +34,9 @@ M.config = {
 		pmenu_bg = "#1c1c1c",
 		pmenu_sel_bg = "#1bfd9c",
 		pmenu_fg = "#c0c0c0",
+
+		-- EndOfBuffer color
+		eob = "#3c3c3c",
 	},
 }
 
@@ -66,12 +71,18 @@ function M.setup(user_config)
 
 		Pmenu = { fg = colors.pmenu_fg, bg = colors.pmenu_bg },
 		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
+
+		-- EndOfBuffer
+		EndOfBuffer = { fg = M.config.show_end_of_buffer and colors.eob or colors.bg, bg = colors.bg },
 	}
 
 	-- Function to apply glow effect
 	local function apply_glow(group_name, config)
 		if M.config.glow then
 			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold guisp=" .. colors.operator)
+		end
+		if config.bg then
+			vim.cmd("highlight " .. group_name .. " guibg=" .. config.bg)
 		end
 	end
 
