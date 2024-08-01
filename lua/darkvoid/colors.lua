@@ -73,7 +73,10 @@ function M.setup(user_config)
 		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
 
 		-- EndOfBuffer
-		EndOfBuffer = { fg = M.config.show_end_of_buffer and colors.eob or colors.bg, bg = colors.bg },
+		EndOfBuffer = {
+			fg = M.config.show_end_of_buffer and colors.eob or colors.bg,
+			bg = M.config.transparent and "NONE" or colors.bg,
+		},
 	}
 
 	-- Function to apply glow effect
