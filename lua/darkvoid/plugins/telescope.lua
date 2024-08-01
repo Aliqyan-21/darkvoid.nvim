@@ -1,16 +1,19 @@
 local M = {}
 
-function M.setup(colors)
+function M.setup(config)
+	local colors = config.colors
+	local transparent = config.transparent
+
 	local telescope_highlight_groups = {
-		TelescopeNormal = { fg = colors.fg, bg = colors.bg },
-		TelescopeBorder = { fg = colors.border, bg = colors.bg },
-		TelescopePromptNormal = { fg = colors.pmenu_fg, bg = colors.pmenu_bg },
-		TelescopePromptBorder = { fg = colors.border, bg = colors.pmenu_bg },
-		TelescopePromptTitle = { fg = colors.title, bg = colors.bg, gui = "bold" },
-		TelescopePromptCounter = { fg = colors.cursor, bg = colors.bg },
+		TelescopeNormal = { fg = colors.fg, bg = transparent and "NONE" or colors.bg },
+		TelescopeBorder = { fg = colors.border, bg = transparent and "NONE" or colors.bg },
+		TelescopePromptNormal = { fg = colors.pmenu_fg, bg = transparent and "NONE" or colors.pmenu_bg },
+		TelescopePromptBorder = { fg = colors.border, bg = transparent and "NONE" or colors.pmenu_bg },
+		TelescopePromptTitle = { fg = colors.title, bg = transparent and "NONE" or colors.bg, gui = "bold" },
+		TelescopePromptCounter = { fg = colors.cursor, bg = transparent and "NONE" or colors.bg },
 		TelescopeSelectionCaret = { fg = colors.operator, bg = colors.visual },
 		TelescopeSelection = { fg = colors.fg, bg = colors.visual, gui = "bold" },
-		TelescopeMatching = { fg = colors.operator, bg = colors.bg, gui = "bold" },
+		TelescopeMatching = { fg = colors.operator, bg = transparent and "NONE" or colors.bg, gui = "bold" },
 	}
 
 	for group_name, config in pairs(telescope_highlight_groups) do
