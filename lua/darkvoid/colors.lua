@@ -44,6 +44,7 @@ M.config = {
 	},
 }
 
+-- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
@@ -121,7 +122,7 @@ function M.setup(user_config)
 	end
 
 	-- Apply plugin specific highlight groups
-	require("darkvoid.plugins.telescope").setup(M.config)
+	require("darkvoid.config").setup(M.config)
 end
 
 return M
