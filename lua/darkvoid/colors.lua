@@ -120,6 +120,9 @@ function M.setup(user_config)
 			apply_glow(group_name, config)
 		end
 	end
+
+	-- Apply plugin specific highlight groups
+	require("darkvoid.config").setup(M.config)
 end
 
 return M
