@@ -37,6 +37,10 @@ M.config = {
 
 		-- EndOfBuffer color
 		eob = "#3c3c3c",
+
+		-- Telescope specific colors
+		border = "#585858",
+		title = "#bdfe58",
 	},
 }
 
@@ -116,6 +120,10 @@ function M.setup(user_config)
 			apply_glow(group_name, config)
 		end
 	end
+
+	-- Setup Telescope plugin support
+	local telescope = require("telescope")
+	telescope.setup(colors)
 end
 
 return M
