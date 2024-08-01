@@ -69,7 +69,7 @@ function M.setup(user_config)
 		Operator = { fg = colors.operator },
 		Delimiter = { fg = colors.bracket },
 
-		Pmenu = { fg = colors.pmenu_fg, bg = colors.pmenu_bg },
+		Pmenu = { fg = colors.pmenu_fg, bg = M.config.transparent and "NONE" or colors.pmenu_bg },
 		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
 
 		-- EndOfBuffer
