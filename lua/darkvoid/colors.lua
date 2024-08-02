@@ -1,3 +1,4 @@
+-- lua/darkvoid/colors.lua
 local M = {}
 
 -- Default configuration
