@@ -1,5 +1,7 @@
 # Configuration
 
+## Theme configs
+
 You can configure **darkvoid.nvim** by setting up the colorscheme in your way and configuring it like this:
 
 ```lua
@@ -45,4 +47,18 @@ require('darkvoid').setup
         title = "#bdfe58",
     },
 })
+```
+## lualine.nvim Configs
+
+To use darkvoid.nvim as your lualine theme add this in your config (lualine.lua)
+
+```lua
+return {
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  enabled = true,
+  config = function()
+    require("darkvoid").setup()
+  end,
+}
 ```
