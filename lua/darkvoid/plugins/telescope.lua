@@ -3,15 +3,15 @@ local M = {}
 function M.setup(colors)
 	-- Define Telescope highlight groups
 	local telescope_highlight_groups = {
-		TelescopeNormal = { fg = colors.fg, bg = colors.bg },
-		TelescopeBorder = { fg = colors.border, bg = colors.bg },
-		TelescopePromptNormal = { fg = colors.pmenu_fg, bg = colors.pmenu_bg },
-		TelescopePromptBorder = { fg = colors.border, bg = colors.pmenu_bg },
-		TelescopePromptTitle = { fg = colors.title, bg = colors.bg, gui = "bold" },
-		TelescopePromptCounter = { fg = colors.cursor, bg = colors.bg },
+		TelescopeNormal = { fg = colors.fg, bg = "NONE" },
+		TelescopeBorder = { fg = colors.border, bg = "NONE" },
+		TelescopePromptNormal = { fg = colors.pmenu_fg, bg = "NONE" },
+		TelescopePromptBorder = { fg = colors.border, bg = "NONE" },
+		TelescopePromptTitle = { fg = colors.title, bg = "NONE", gui = "bold" },
+		TelescopePromptCounter = { fg = colors.cursor, bg = "NONE" },
 		TelescopeSelectionCaret = { fg = colors.operator, bg = colors.visual },
 		TelescopeSelection = { fg = colors.fg, bg = colors.visual, gui = "bold" },
-		TelescopeMatching = { fg = colors.operator, bg = colors.bg, gui = "bold" },
+		TelescopeMatching = { fg = colors.operator, bg = "NONE", gui = "bold" },
 	}
 
 	-- Apply Telescope highlight groups
