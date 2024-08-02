@@ -73,7 +73,7 @@ However, support for more popular plugins is still in progress. The following pl
 - [x] telescope: Fuzzy finder integration
 - [x] gitsigns: Git integration and signs
 - [ ] bufferline: buffer tabs
-- [ ] lualine: lualine support
+- [x] lualine: lualine support
 
 ... You can add support for other plugins not in list and I will update readme
 
