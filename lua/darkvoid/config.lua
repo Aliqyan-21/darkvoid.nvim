@@ -1,22 +1,20 @@
 local M = {}
 
--- Default configuration
-M.config = {}
-
 -- Plugin support loading
-local function load_plugins(colors)
+local function load_plugins(colors, config)
 	local plugins = {
 		"gitsigns",
 		"treesitter",
 		"nvimtree",
 		"telescope",
+		"lualine",
 		-- more plugins can be added here
 	}
 
 	for _, plugin in ipairs(plugins) do
 		local ok, plugin_config = pcall(require, "darkvoid.plugins." .. plugin)
 		if ok then
-			plugin_config.setup(colors)
+			plugin_config.setup(colors, config)
 		else
 			print("Failed to load " .. plugin .. " configuration")
 		end
@@ -25,13 +23,15 @@ end
 
 -- Apply colorscheme
 function M.setup(user_config)
+	-- Load the colors and config from colors.lua
+	local colors = require("darkvoid.colors").config.colors
+	local config = require("darkvoid.colors").config
+
 	-- Merge user configuration with default (optional)
-	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
+	config = vim.tbl_deep_extend("force", config, user_config or {})
 
-	-- Define colors
-	local colors = M.config.colors
-
-	load_plugins(colors)
+	-- Load plugin configurations
+	load_plugins(colors, config)
 end
 
 return M
