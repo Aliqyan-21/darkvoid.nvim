@@ -47,12 +47,15 @@ function M.setup(colors, config)
 		},
 	}
 
-	-- Setup lualine with the defined theme
-	require("lualine").setup({
-		options = {
-			theme = lualine_theme,
-		},
-	})
+	-- Check if lualine is available before setting it up
+	local ok, lualine = pcall(require, "lualine")
+	if ok then
+		lualine.setup({
+			options = {
+				theme = lualine_theme,
+			},
+		})
+	end
 end
 
 return M
