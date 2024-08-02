@@ -15,6 +15,8 @@ out of the mushrooms while exploring...Aah the scenery!
 
 - **Customizable**: Easily configure transparency, glow effect, and color settings to suit your preferences.
 
+- **Plugins**: Supports treesitter, nvimtree, telescope, gitsigns, etc. popular plugins.
+
 ## Installation
 
 To install `darkvoid.nvim`, you can use your preferred plugin manager. For example, with [packer.nvim](https://github.com/wbthomason/packer.nvim):
