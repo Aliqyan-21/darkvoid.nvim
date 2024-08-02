@@ -36,32 +36,39 @@ This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
 ## Colorscheme Preview
 
 ### Transparency off, Glow off 
-![tfgf](preview/tfgf.png) 
+![pic](preview/tfgf.png) 
 
 ### Transparency off, Glow on 
-![tfgf](preview/tfgt.png) 
+![pic](preview/tfgt.png) 
 
 ### Transparency on, Glow off 
-![tfgf](preview/ttgf.png) 
+![pic](preview/ttgf.png) 
 
 ### Transparency on, Glow on 
-![tfgf](preview/ttgt.png) 
+![pic](preview/ttgt.png) 
 
 ### Search Highlighting
-![tfgf](preview/search_highlighting.png) 
+![pic](preview/search_highlighting.png) 
 
 ### NvimTree
-![tfgf](preview/nvimtree(tf).png) 
+![pic](preview/nvimtree(tf).png) 
 
 ### NvimTree (transparent)
-![tfgf](preview/nvimtree(tt).png) 
+![pic](preview/nvimtree(tt).png) 
+
+### Telescope
+![pic](preview/telescope(tf).png) 
+
+### Telescope (transparent)
+![pic](preview/telescope(tt).png) 
 
 ## Supported Plugins
-Currently, darkvoid.nvim supports basic Neovim syntax highlighting. However, support for popular plugins is still in progress. The following plugins are planned for support:
+Currently, darkvoid.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc. 
+However, support for more popular plugins is still in progress. The following plugins are planned for support:
 
 - [x] nvim-tree: File explorer integration
 - [x] treesitter: Enhanced syntax highlighting
-- [ ] telescope: Fuzzy finder integration
+- [x] telescope: Fuzzy finder integration
 - [x] gitsigns: Git integration and signs
 - [ ] bufferline: buffer tabs
 - [ ] lualine: lualine support
