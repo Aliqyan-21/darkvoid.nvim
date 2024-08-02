@@ -1,3 +1,4 @@
+-- lua/darkvoid/config.lua
 local M = {}
 
 -- Plugin support loading
