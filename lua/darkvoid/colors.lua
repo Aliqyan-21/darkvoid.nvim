@@ -47,7 +47,7 @@ M.config = {
 		bufferline_bg = "#1c1c1c",
 		bufferline_fg = "#c0c0c0",
 		bufferline_active_fg = "#1bfd9c",
-		bufferline_active_bg = "#303030",
+		bufferline_active_bg = "#1c1c1c",
 		bufferline_separator = "#1c1c1c",
 	},
 }
