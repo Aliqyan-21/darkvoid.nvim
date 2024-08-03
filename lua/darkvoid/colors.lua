@@ -44,7 +44,7 @@ M.config = {
 
 		-- Bufferline specific colors (example)
 		bufferline_fill = "#1c1c1c",
-		bufferline_bg = "#404040",
+		bufferline_bg = "#1c1c1c",
 		bufferline_fg = "#c0c0c0",
 		bufferline_active_fg = "#1bfd9c",
 		bufferline_active_bg = "#303030",
