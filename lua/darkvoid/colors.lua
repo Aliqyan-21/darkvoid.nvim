@@ -41,14 +41,6 @@ M.config = {
 		-- Telescope specific colors
 		border = "#585858",
 		title = "#bdfe58",
-
-		-- Bufferline specific colors (example)
-		bufferline_fill = "#1c1c1c",
-		bufferline_bg = "#1c1c1c",
-		bufferline_fg = "#c0c0c0",
-		bufferline_active_fg = "#1bfd9c",
-		bufferline_active_bg = "#1c1c1c",
-		bufferline_separator = "#1c1c1c",
 	},
 }
 
