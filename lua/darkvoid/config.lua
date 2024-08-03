@@ -1,4 +1,3 @@
--- lua/darkvoid/config.lua
 local M = {}
 
 -- Plugin support loading
@@ -9,6 +8,7 @@ local function load_plugins(colors, config)
 		"nvimtree",
 		"telescope",
 		"lualine",
+		"bufferline",
 		-- more plugins can be added here
 	}
 
