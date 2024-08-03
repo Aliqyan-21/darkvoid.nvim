@@ -72,7 +72,7 @@ However, support for more popular plugins is still in progress. The following pl
 - [x] treesitter: Enhanced syntax highlighting
 - [x] telescope: Fuzzy finder integration
 - [x] gitsigns: Git integration and signs
-- [ ] bufferline: buffer tabs
+- [x] bufferline: buffer tabs
 - [x] lualine: lualine support
 
 ... You can add support for other plugins not in list and I will update readme
