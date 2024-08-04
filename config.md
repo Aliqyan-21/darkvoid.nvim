@@ -45,6 +45,10 @@ require('darkvoid').setup
         -- Telescope specific colors
         border = "#585858",
         title = "#bdfe58",
+
+        -- bufferline specific colors
+        -- change this to change the colors of current or selected tab
+        bufferline_selection = "#bdfe58"
     },
 })
 ```
