@@ -5,13 +5,13 @@ function M.setup(colors)
 		BufferLineFill = { bg = "NONE", fg = colors.fg },
 		BufferLineBackground = { bg = "NONE", fg = colors.fg },
 		BufferLineBufferVisible = { bg = "NONE", fg = colors.fg },
-		BufferLineBufferSelected = { bg = "NONE", fg = colors.operator, gui = "bold" },
+		BufferLineBufferSelected = { bg = "NONE", fg = colors.bufferline_selection, gui = "bold" },
 		BufferLineTab = { bg = "NONE", fg = colors.fg },
 		BufferLineTabSelected = { bg = "NONE", fg = colors.bg },
 		BufferLineTabClose = { bg = "NONE", fg = colors.fg },
 		BufferLineSeparator = { bg = "NONE", fg = colors.line_nr },
-		BufferLineSeparatorSelected = { bg = colors.bg, fg = colors.operator },
-		BufferLineIndicatorSelected = { bg = colors.bg, fg = colors.operator },
+		BufferLineSeparatorSelected = { bg = colors.bg, fg = colors.bufferline_selection },
+		BufferLineIndicatorSelected = { bg = colors.bg, fg = colors.bufferline_selection },
 	}
 
 	-- Apply Bufferline highlight groups
