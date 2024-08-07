@@ -43,7 +43,7 @@ M.config = {
 		title = "#bdfe58",
 
 		-- bufferline specific colors
-		bufferline_selection = "#bdfe58",
+		bufferline_selection = "#1bfd9c",
 	},
 }
 
