@@ -44,6 +44,12 @@ M.config = {
 
 		-- bufferline specific colors
 		bufferline_selection = "#1bfd9c",
+
+		-- LSP diagnostics colors
+		error = "#dea6a0",
+		warning = "#D0B8A8",
+		hint = "#BEDC74",
+		info = "#7FA1C3",
 	},
 }
 
@@ -84,6 +90,21 @@ function M.setup(user_config)
 			fg = M.config.show_end_of_buffer and colors.eob or colors.bg,
 			bg = M.config.transparent and "NONE" or colors.bg,
 		},
+
+		-- LSP diagnostics
+		DiagnosticError = { fg = colors.error },
+		DiagnosticWarn = { fg = colors.warning },
+		DiagnosticHint = { fg = colors.hint },
+		DiagnosticInfo = { fg = colors.info },
+		DiagnosticVirtualTextError = { fg = colors.error },
+		DiagnosticVirtualTextWarn = { fg = colors.warning },
+		DiagnosticVirtualTextHint = { fg = colors.hint },
+		DiagnosticVirtualTextInfo = { fg = colors.info },
+
+		DiagnosticUnderlineError = { gui = "underline", sp = colors.error },
+		DiagnosticUnderlineWarn = { gui = "underline", sp = colors.warning },
+		DiagnosticUnderlineHint = { gui = "underline", sp = colors.hint },
+		DiagnosticUnderlineInfo = { gui = "underline", sp = colors.info },
 	}
 
 	-- Function to apply glow effect
@@ -107,6 +128,9 @@ function M.setup(user_config)
 		end
 		if config.gui then
 			cmd = cmd .. " gui=" .. config.gui
+		end
+		if config.sp then
+			cmd = cmd .. " guisp=" .. config.sp
 		end
 		vim.cmd(cmd)
 
