@@ -28,20 +28,20 @@ require('darkvoid').setup
         preprocessor = "#4b8902",
         bool = "#66b2b2",
         constant = "#b2d8d8",
-        
+
         -- gitsigns colors
         added = "#baffc9",
         changed = "#ffffba",
         removed = "#ffb3ba",
-        
+
         -- Pmenu colors
         pmenu_bg = "#1c1c1c",
         pmenu_sel_bg = "#1bfd9c",
         pmenu_fg = "#c0c0c0",
-        
+
         -- EndOfBuffer color
         eob = "#3c3c3c",
-        
+
         -- Telescope specific colors
         border = "#585858",
         title = "#bdfe58",
@@ -49,9 +49,16 @@ require('darkvoid').setup
         -- bufferline specific colors
         -- change this to change the colors of current or selected tab
         bufferline_selection = "#bdfe58"
+
+		-- LSP diagnostics colors
+		error = "#dea6a0",
+		warning = "#D0B8A8",
+		hint = "#BEDC74",
+		info = "#7FA1C3",
     },
 })
 ```
+
 ## lualine.nvim Configs
 
 To use darkvoid.nvim as your lualine theme add this in your config (lualine.lua)
