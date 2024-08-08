@@ -47,9 +47,9 @@ M.config = {
 
 		-- LSP diagnostics colors
 		error = "#dea6a0",
-		warning = "#D0B8A8",
-		hint = "#BEDC74",
-		info = "#7FA1C3",
+		warning = "#d6efd8",
+		hint = "#bedc74",
+		info = "#7fa1c3",
 	},
 }
 
