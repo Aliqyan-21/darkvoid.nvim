@@ -1,8 +1,8 @@
 # Darkvoid.nvim
 
-Have you ever been in a dark room coding by yourself in that dark void with only glow coming from your pc which is the 
-only important thing right now, this colorscheme is inspired by that, it's like the deep ocean darkvoid where the only glowing things 
-are the alien creature living there, it's like a deep cave darkvoid where the glow is coming 
+Have you ever been in a dark room coding by yourself in that dark void with only glow coming from your pc which is the
+only important thing right now, this colorscheme is inspired by that, it's like the deep ocean darkvoid where the only glowing things
+are the alien creature living there, it's like a deep cave darkvoid where the glow is coming
 out of the mushrooms while exploring...Aah the scenery!
 
 **Darkvoid.nvim** is same, where only important stuff, that is, your code is highlighted and if you want, you can make it glow!
@@ -25,47 +25,57 @@ To install `darkvoid.nvim`, you can use your preferred plugin manager. For examp
 use 'aliqyan-21/darkvoid.nvim'
 ```
 
-
-To install `darkvoid.nvim`, you can use your preferred plugin manager. For example, with [lazy.nvim](https://github.com/folke/lazy.nvim):
+With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 return {'aliqyan-21/darkvoid.nvim'}
 ```
 
 ## Configuration
-This is how you can configure `darkvoid.nvim` - [Configuration](config.md) 
+
+This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
 
 ## Colorscheme Preview
 
-### Transparency off, Glow off 
-![pic](preview/tfgf.png) 
+### Transparency off, Glow off
 
-### Transparency off, Glow on 
-![pic](preview/tfgt.png) 
+![pic](preview/tfgf.png)
 
-### Transparency on, Glow off 
-![pic](preview/ttgf.png) 
+### Transparency off, Glow on
 
-### Transparency on, Glow on 
-![pic](preview/ttgt.png) 
+![pic](preview/tfgt.png)
+
+### Transparency on, Glow off
+
+![pic](preview/ttgf.png)
+
+### Transparency on, Glow on
+
+![pic](preview/ttgt.png)
 
 ### Search Highlighting
-![pic](preview/search_highlighting.png) 
+
+![pic](preview/search_highlighting.png)
 
 ### NvimTree
-![pic](preview/nvimtree(tf).png) 
+
+![pic](<preview/nvimtree(tf).png>)
 
 ### NvimTree (transparent)
-![pic](preview/nvimtree(tt).png) 
+
+![pic](<preview/nvimtree(tt).png>)
 
 ### Telescope
-![pic](preview/telescope(tf).png) 
+
+![pic](<preview/telescope(tf).png>)
 
 ### Telescope (transparent)
-![pic](preview/telescope(tt).png) 
+
+![pic](<preview/telescope(tt).png>)
 
 ## Supported Plugins
-Currently, darkvoid.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc. 
+
+Currently, darkvoid.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc.
 However, support for more popular plugins is still in progress. The following plugins are planned for support:
 
 - [x] nvim-tree: File explorer integration
