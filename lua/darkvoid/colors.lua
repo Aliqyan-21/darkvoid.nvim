@@ -53,6 +53,10 @@ M.config = {
 	},
 }
 
+M.extend = function(user_config)
+  M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
+end
+
 -- Apply the colorscheme (using defined colors and groups)
 function M.setup(user_config)
 	-- Merge user configuration with default (optional)
