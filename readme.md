@@ -78,7 +78,7 @@ This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
 ## Supported Plugins
 
 Currently, darkvoid.nvim supports basic Neovim syntax highlighting and common but necessary plugins like treesitter, telescope, etc.
-However, support for more popular plugins is still in progress. The following plugins are planned for support:
+However, support for more popular plugins is still in progress. The following plugins are supported:
 
 - [x] nvim-tree: File explorer integration
 - [x] treesitter: Enhanced syntax highlighting
@@ -86,6 +86,7 @@ However, support for more popular plugins is still in progress. The following pl
 - [x] gitsigns: Git integration and signs
 - [x] bufferline: buffer tabs
 - [x] lualine: lualine support
+- [x] oil: oil support (let's get oily)
 
 ... You can add support for other plugins not in list and I will update readme
 
