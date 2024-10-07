@@ -1,1 +1,1 @@
-require("darkvoid").setup()
+require("darkvoid").load()
