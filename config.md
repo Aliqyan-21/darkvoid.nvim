@@ -5,10 +5,10 @@
 You can configure **darkvoid.nvim** by setting up the colorscheme in your way and configuring it like this:
 
 ```lua
-require('darkvoid').setup
-    transparent = false, -- set true for transparent
-    glow = false, -- set true for glow effect
-    show_end_of_buffer = true, -- set false for not showing end of buffer
+require('darkvoid').setup({
+    transparent = false,
+    glow = false,
+    show_end_of_buffer = true,
 
     colors = {
         fg = "#c0c0c0",
@@ -29,6 +29,18 @@ require('darkvoid').setup
         bool = "#66b2b2",
         constant = "#b2d8d8",
 
+        -- enable or disable specific plugin highlights
+        plugins = {
+            gitsigns = true,
+            nvim_cmp = true,
+            treesitter = true,
+            nvimtree = true,
+            telescope = true,
+            lualine = true,
+            bufferline = true,
+            oil = true,
+        },
+
         -- gitsigns colors
         added = "#baffc9",
         changed = "#ffffba",
@@ -47,15 +59,13 @@ require('darkvoid').setup
         title = "#bdfe58",
 
         -- bufferline specific colors
-        -- change this to change the colors of current or selected tab
-        bufferline_selection = "#bdfe58"
+        bufferline_selection = "#1bfd9c",
 
-		-- LSP diagnostics colors
-		error = "#dea6a0",
-		warning = "#D0B8A8",
-		hint = "#BEDC74",
-		info = "#7FA1C3",
-    },
+        -- LSP diagnostics colors
+        error = "#dea6a0",
+        warning = "#d6efd8",
+        hint = "#bedc74",
+        info = "#7fa1c3",
 })
 ```
 

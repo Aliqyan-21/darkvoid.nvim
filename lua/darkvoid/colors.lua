@@ -25,6 +25,18 @@ M.config = {
 		bool = "#66b2b2",
 		constant = "#b2d8d8",
 
+		-- enable or disable specific plugin highlights
+		plugins = {
+			gitsigns = true,
+			nvim_cmp = true,
+			treesitter = true,
+			nvimtree = true,
+			telescope = true,
+			lualine = true,
+			bufferline = true,
+			oil = true,
+		},
+
 		-- gitsigns colors
 		added = "#baffc9",
 		changed = "#ffffba",
@@ -54,7 +66,7 @@ M.config = {
 }
 
 M.extend = function(user_config)
-  M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
+	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 end
 
 -- Apply the colorscheme (using defined colors and groups)
@@ -62,7 +74,6 @@ function M.setup(user_config)
 	-- Merge user configuration with default (optional)
 	M.config = vim.tbl_deep_extend("force", M.config, user_config or {})
 
-	-- Define colors and highlight groups (using updated config)
 	local colors = M.config.colors
 
 	local highlight_groups = {
