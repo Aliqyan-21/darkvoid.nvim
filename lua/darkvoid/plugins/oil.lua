@@ -1,6 +1,12 @@
 local M = {}
 
 function M.setup(colors)
+	local enabled = require("darkvoid.colors").config.plugins.oil
+
+	if not enabled then
+		return
+	end
+
 	-- let's get oily
 	local oil_highlight_groups = {
 		OilDir = { fg = colors.identifier, bg = "NONE" },

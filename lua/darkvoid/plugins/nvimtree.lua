@@ -3,6 +3,12 @@ local M = {}
 M.setup = function()
 	local colors = require("darkvoid.colors").config.colors
 
+	local enabled = require("darkvoid.colors").config.plugins.nvimtree
+
+	if not enabled then
+		return
+	end
+
 	local highlight_groups = {
 		NvimTreeFolderIcon = { fg = colors.identifier, bg = "NONE" },
 		NvimTreeFolderName = { fg = colors.func, bg = "NONE" },

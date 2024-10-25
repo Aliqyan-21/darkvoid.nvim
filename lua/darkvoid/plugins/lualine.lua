@@ -1,6 +1,12 @@
 local M = {}
 
 function M.setup(colors, config)
+	local enabled = require("darkvoid.colors").config.plugins.lualine
+
+	if not enabled then
+		return
+	end
+
 	-- Determine common background color and glow effect
 	local common_bg = config.transparent and "NONE" or colors.bg
 	local glow_fg = config.glow and "bold" or "NONE"

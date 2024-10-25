@@ -2,6 +2,11 @@ local M = {}
 
 function M.setup()
 	local colors = require("darkvoid.colors").config.colors
+	local enabled = require("darkvoid.colors").config.plugins.treesitter
+
+	if not enabled then
+		return
+	end
 
 	local highlight_groups = {
 		["@function"] = { fg = colors.func },

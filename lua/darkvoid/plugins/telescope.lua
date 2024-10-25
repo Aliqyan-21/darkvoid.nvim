@@ -1,6 +1,12 @@
 local M = {}
 
 function M.setup(colors)
+	local enabled = require("darkvoid.colors").config.plugins.telescope
+
+	if not enabled then
+		return
+	end
+
 	-- Define Telescope highlight groups
 	local telescope_highlight_groups = {
 		TelescopeNormal = { fg = colors.fg, bg = "NONE" },
