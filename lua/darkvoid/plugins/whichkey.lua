@@ -1,8 +1,8 @@
 local M = {}
 
-M.setup = function(config)
+M.setup = function()
 	local colors = require("darkvoid.colors").config.colors
-	local enabled = config.colors.plugins.whichkey
+	local enabled = require("darkvoid.colors").config.colors.plugins.whichkey
 
 	if not enabled then
 		return
