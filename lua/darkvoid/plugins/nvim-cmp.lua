@@ -2,7 +2,7 @@ local M = {}
 
 M.setup = function(config)
 	local colors = require("darkvoid.colors").config.colors
-	local enabled = require("darkvoid.colors").config.plugins.nvim_cmp -- Access the specific highlight setting
+	local enabled = require("darkvoid.colors").config.colors.plugins.nvim_cmp
 
 	if not enabled then
 		return

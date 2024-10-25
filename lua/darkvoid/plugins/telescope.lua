@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup(colors)
-	local enabled = require("darkvoid.colors").config.plugins.telescope
+	local enabled = require("darkvoid.colors").config.colors.plugins.telescope
 
 	if not enabled then
 		return

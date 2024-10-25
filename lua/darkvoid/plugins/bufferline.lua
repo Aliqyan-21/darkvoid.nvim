@@ -1,7 +1,7 @@
 local M = {}
 
 function M.setup()
-	local enabled = require("darkvoid.colors").config.plugins.bufferline
+	local enabled = require("darkvoid.colors").config.colors.plugins.bufferline
 
 	if not enabled then
 		return

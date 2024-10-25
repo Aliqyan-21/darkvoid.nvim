@@ -1,8 +1,8 @@
 local M = {}
 
-M.setup = function()
+M.setup = function(config)
 	local colors = require("darkvoid.colors").config.colors
-	local enabled = require("darkvoid.colors").config.plugins.whichkey
+	local enabled = config.colors.plugins.whichkey
 
 	if not enabled then
 		return
@@ -15,13 +15,13 @@ M.setup = function()
 		WhichKeySeperator = { fg = colors.comment, bg = colors.bg },
 	}
 
-	for group_name, config in pairs(highlight_groups) do
+	for group_name, conf in pairs(highlight_groups) do
 		local cmd = "highlight " .. group_name
-		if config.fg then
-			cmd = cmd .. " guifg=" .. config.fg
+		if conf.fg then
+			cmd = cmd .. " guifg=" .. conf.fg
 		end
-		if config.bg then
-			cmd = cmd .. " guibg=" .. config.bg
+		if conf.bg then
+			cmd = cmd .. " guibg=" .. conf.bg
 		end
 		vim.cmd(cmd)
 	end

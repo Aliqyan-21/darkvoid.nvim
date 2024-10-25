@@ -3,7 +3,7 @@ local M = {}
 M.setup = function()
 	local colors = require("darkvoid.colors").config.colors
 
-	local enabled = require("darkvoid.colors").config.plugins.nvimtree
+	local enabled = require("darkvoid.colors").config.colors.plugins.nvimtree
 
 	if not enabled then
 		return
