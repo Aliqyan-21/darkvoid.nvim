@@ -17,7 +17,7 @@ out of the mushrooms while exploring...Aah the scenery!
 
 - **Customizable**: Easily configure transparency, glow effect, and color settings to suit your preferences.
 
-- **Plugins**: Supports treesitter, nvimtree, telescope, gitsigns, etc. popular plugins.
+- **Plugins**: Supports treesitter, nvimtree, telescope, gitsigns, etc. popular plugins `(If you prefer you can also turn off specific plugins highlights if you don't need them in your **config**)`.
 
 ## Installation
 
@@ -87,6 +87,8 @@ However, support for more popular plugins is still in progress. The following pl
 - [x] bufferline: buffer tabs
 - [x] lualine: lualine support
 - [x] oil: oil support (let's get oily)
+- [x] whichkey: whichkey support
+- [x] nvim-cmp: nvim-cmp support
 
 ... You can add support for other plugins not in list and I will update readme
 
