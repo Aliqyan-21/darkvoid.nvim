@@ -10,6 +10,7 @@ local function load_plugins(colors, config)
 		"lualine",
 		"bufferline",
 		"oil",
+		"nvim-cmp",
 		-- more plugins can be added here
 	}
 
