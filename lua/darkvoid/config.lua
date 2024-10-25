@@ -11,6 +11,7 @@ local function load_plugins(colors, config)
 		"bufferline",
 		"oil",
 		"nvim-cmp",
+		"whichkey",
 		-- more plugins can be added here
 	}
 

@@ -39,6 +39,7 @@ require('darkvoid').setup({
             lualine = true,
             bufferline = true,
             oil = true,
+            whichkey = true,
         },
 
         -- gitsigns colors
