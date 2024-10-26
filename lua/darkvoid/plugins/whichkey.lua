@@ -3,16 +3,31 @@ local M = {}
 M.setup = function()
 	local colors = require("darkvoid.colors").config.colors
 	local enabled = require("darkvoid.colors").config.colors.plugins.whichkey
+	local transparent = require("darkvoid.colors").config.transparent
 
 	if not enabled then
 		return
 	end
 
 	local highlight_groups = {
-		WhichKey = { fg = colors.fg, bg = colors.bg },
-		WhichKeyGroup = { fg = colors.kw, bg = colors.bg },
-		WhichKeyDesc = { fg = colors.func, bg = colors.bg },
-		WhichKeySeperator = { fg = colors.comment, bg = colors.bg },
+		WhichKey = { fg = colors.func, bg = transparent and "NONE" or colors.bg },
+		WhichKeyBorder = { fg = colors.comment, bg = transparent and "NONE" or colors.bg },
+		WhichKeyDesc = { fg = colors.func, bg = transparent and "NONE" or colors.bg },
+		WhichKeyGroup = { fg = colors.kw, bg = transparent and "NONE" or colors.bg, gui = "bold" },
+		WhichKeyIcon = { fg = colors.func, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconAzure = { fg = colors.kw, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconBlue = { fg = colors.fg, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconCyan = { fg = colors.cursor, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconGreen = { fg = colors.string, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconGrey = { fg = colors.comment, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconOrange = { fg = colors.visual, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconPurple = { fg = colors.const, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconRed = { fg = colors.error, bg = transparent and "NONE" or colors.bg },
+		WhichKeyIconYellow = { fg = colors.warn, bg = transparent and "NONE" or colors.bg },
+		WhichKeyNormal = { fg = colors.fg, bg = transparent and "NONE" or colors.bg },
+		WhichKeySeparator = { fg = colors.comment, bg = transparent and "NONE" or colors.bg },
+		WhichKeyTitle = { fg = colors.kw, bg = transparent and "NONE" or colors.bg, gui = "bold" },
+		WhichKeyValue = { fg = colors.comment, bg = transparent and "NONE" or colors.bg },
 	}
 
 	for group_name, conf in pairs(highlight_groups) do
