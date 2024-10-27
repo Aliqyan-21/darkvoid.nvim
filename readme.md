@@ -89,6 +89,7 @@ However, support for more popular plugins is still in progress. The following pl
 - [x] oil: oil support (let's get oily)
 - [x] whichkey: whichkey support
 - [x] nvim-cmp: nvim-cmp support
+- [x] nvim-notify: nvim-notify support
 
 ... You can add support for other plugins not in list and I will update readme
 
