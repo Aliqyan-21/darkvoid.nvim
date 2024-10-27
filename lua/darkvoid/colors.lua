@@ -36,6 +36,7 @@ M.config = {
 			bufferline = true,
 			oil = true,
 			whichkey = true,
+			nvim_notify = true,
 		},
 
 		-- gitsigns colors

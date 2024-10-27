@@ -12,6 +12,7 @@ local function load_plugins(colors, config)
 		"oil",
 		"nvim-cmp",
 		"whichkey",
+		"nvim_notify",
 		-- more plugins can be added here
 	}
 
