@@ -7,7 +7,7 @@ out of the mushrooms while exploring...Aah the scenery!
 
 **Darkvoid.nvim** is same, where only important stuff, that is, your code is highlighted and if you want, you can make it glow!
 
-<img src="preview/darkvoid.jpg" alt="Description" width="800" style="border: 2px solid #111;">
+<img src="preview/darkvoid.png" alt="Description" width="800" style="border: 2px solid #111;">
 
 ## Features
 
