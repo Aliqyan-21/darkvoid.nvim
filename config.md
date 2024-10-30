@@ -22,6 +22,8 @@ require('darkvoid').setup({
         kw = "#f1f1f1",
         identifier = "#b1b1b1",
         type = "#a1a1a1",
+        type_builtin = "#c5c5c5", -- current
+        -- type_builtin = "#8cf8f7", -- glowy blue old (was present by default before type_builtin was introduced added here for people who may like it)
         search_highlight = "#1bfd9c",
         operator = "#1bfd9c",
         bracket = "#e6e6e6",

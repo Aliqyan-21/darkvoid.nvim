@@ -18,6 +18,7 @@ M.config = {
 		kw = "#f1f1f1",
 		identifier = "#b1b1b1",
 		type = "#a1a1a1",
+		type_builtin = "#c5c5c5",
 		search_highlight = "#1bfd9c",
 		operator = "#1bfd9c",
 		bracket = "#e6e6e6",

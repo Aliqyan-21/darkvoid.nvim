@@ -21,6 +21,7 @@ function M.setup()
 		["@variable"] = { fg = colors.identifier },
 		["@variable.builtin"] = { fg = colors.identifier },
 		["@type"] = { fg = colors.type },
+		["@type.builtin"] = { fg = colors.type_builtin },
 		["@parameter"] = { fg = colors.identifier },
 		["@constant"] = { fg = colors.constant },
 		["@constant.builtin"] = { fg = colors.constant },
