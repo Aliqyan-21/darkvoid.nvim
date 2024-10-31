@@ -1,11 +1,10 @@
 # Darkvoid.nvim
 
-Have you ever been in a dark room coding by yourself in that dark void with only glow coming from your pc which is the
-only important thing right now, this colorscheme is inspired by that, it's like the deep ocean darkvoid where the only glowing things
-are the alien creature living there, it's like a deep cave darkvoid where the glow is coming
-out of the mushrooms while exploring...Aah the scenery!
+Have you ever been in a dark room coding by yourself? In that dark void, where the only light shines from your PC; the
+only thing that matters in that moment. This colorscheme is inspired by that feeling: like a dark void in the deep ocean, where the only lights
+are the alien creatures living there; like exploring a dark void in a deep cave where the glow of the mushrooms litters your vision... _Aah, the scenery!_
 
-**Darkvoid.nvim** is same, where only important stuff, that is, your code is highlighted and if you want, you can make it glow!
+**Darkvoid.nvim** is same, where only the important stuff.. That is, _your code_, is highlighted. _And if you want, you can make it **glow**!_
 
 <img src="preview/darkvoid.png" alt="Description" width="800" style="border: 2px solid #111;">
 
