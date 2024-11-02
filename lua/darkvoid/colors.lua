@@ -25,6 +25,7 @@ M.config = {
 		preprocessor = "#4b8902",
 		bool = "#66b2b2",
 		constant = "#b2d8d8",
+		special = "#8cf8f7",
 
 		-- enable or disable specific plugin highlights
 		plugins = {
@@ -94,6 +95,7 @@ function M.setup(user_config)
 		PreProc = { fg = colors.preprocessor },
 		Boolean = { fg = colors.bool },
 		Constant = { fg = colors.constant },
+		Special = { fg = colors.special },
 
 		Search = { fg = colors.search_highlight, bg = "NONE", gui = "bold" },
 		IncSearch = { fg = colors.search_highlight, bg = "NONE", gui = "bold" },
