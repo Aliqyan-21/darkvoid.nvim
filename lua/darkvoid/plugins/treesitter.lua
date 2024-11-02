@@ -28,6 +28,7 @@ function M.setup()
 		["@comment"] = { fg = colors.comment, gui = "italic" },
 		["@punctuation.delimiter"] = { fg = colors.bracket },
 		["@punctuation.bracket"] = { fg = colors.bracket },
+		["@constructor.lua"] = { fg = colors.bracket },
 		["@operator"] = { fg = colors.operator },
 	}
 
