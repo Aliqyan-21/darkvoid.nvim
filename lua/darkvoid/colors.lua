@@ -25,6 +25,7 @@ M.config = {
 		preprocessor = "#4b8902",
 		bool = "#66b2b2",
 		constant = "#b2d8d8",
+		glow_color = "#1bfd9c",
 
 		-- enable or disable specific plugin highlights
 		plugins = {
@@ -103,6 +104,12 @@ function M.setup(user_config)
 		Pmenu = { fg = colors.pmenu_fg, bg = M.config.transparent and "NONE" or colors.pmenu_bg },
 		PmenuSel = { fg = colors.pmenu_bg, bg = colors.pmenu_sel_bg, gui = "bold" },
 
+		-- have to define treesitter based functions as well for glow effect
+		["@function"] = { fg = colors.func },
+		["@keyword"] = { fg = colors.kw },
+		["@identifier"] = { fg = colors.identifier },
+		["@operator"] = { fg = colors.operator },
+
 		-- EndOfBuffer
 		EndOfBuffer = {
 			fg = M.config.show_end_of_buffer and colors.eob or colors.bg,
@@ -125,18 +132,7 @@ function M.setup(user_config)
 		DiagnosticUnderlineInfo = { gui = "underline", sp = colors.info },
 	}
 
-	-- Function to apply glow effect
-	local function apply_glow(group_name, config)
-		if M.config.glow then
-			vim.cmd("highlight " .. group_name .. " guifg=" .. config.fg .. " gui=bold guisp=" .. colors.operator)
-		end
-		if config.bg then
-			vim.cmd("highlight " .. group_name .. " guibg=" .. config.bg)
-		end
-	end
-
-	-- Apply highlight groups
-	for group_name, config in pairs(highlight_groups) do
+	local function apply_highlight(group_name, config)
 		local cmd = "highlight " .. group_name
 		if config.fg then
 			cmd = cmd .. " guifg=" .. config.fg
@@ -150,9 +146,7 @@ function M.setup(user_config)
 		if config.sp then
 			cmd = cmd .. " guisp=" .. config.sp
 		end
-		vim.cmd(cmd)
 
-		-- Apply glow effect to important groups
 		if
 			M.config.glow
 			and (
@@ -160,10 +154,21 @@ function M.setup(user_config)
 				or group_name == "Keyword"
 				or group_name == "Identifier"
 				or group_name == "Operator"
+				or group_name == "@function"
+				or group_name == "@keyword"
+				or group_name == "@identifier"
+				or group_name == "@operator"
 			)
 		then
-			apply_glow(group_name, config)
+			cmd = cmd .. " gui=bold guisp=" .. colors.glow_color
 		end
+
+		vim.cmd(cmd)
+	end
+
+	-- Apply all highlights
+	for group_name, config in pairs(highlight_groups) do
+		apply_highlight(group_name, config)
 	end
 
 	-- Apply plugin specific highlight groups
