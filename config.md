@@ -70,6 +70,7 @@ require('darkvoid').setup({
         warning = "#d6efd8",
         hint = "#bedc74",
         info = "#7fa1c3",
+    },
 })
 ```
 
