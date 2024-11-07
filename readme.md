@@ -36,43 +36,11 @@ return {'aliqyan-21/darkvoid.nvim'}
 
 This is how you can configure `darkvoid.nvim` - [Configuration](config.md)
 
-## Colorscheme Preview
-
-### Transparency off, Glow off
+## Preview
 
 ![pic](preview/tfgf.png)
 
-### Transparency off, Glow on
-
-![pic](preview/tfgt.png)
-
-### Transparency on, Glow off
-
-![pic](preview/ttgf.png)
-
-### Transparency on, Glow on
-
-![pic](preview/ttgt.png)
-
-### Search Highlighting
-
-![pic](preview/search_highlighting.png)
-
-### NvimTree
-
-![pic](<preview/nvimtree(tf).png>)
-
-### NvimTree (transparent)
-
-![pic](<preview/nvimtree(tt).png>)
-
-### Telescope
-
-![pic](<preview/telescope(tf).png>)
-
-### Telescope (transparent)
-
-![pic](<preview/telescope(tt).png>)
+###### More Screenshots: [images](preview/screenshots.md)
 
 ## Supported Plugins
 
