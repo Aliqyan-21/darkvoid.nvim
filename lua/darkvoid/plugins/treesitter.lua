@@ -65,7 +65,7 @@ function M.setup()
 		["@tag"] = { fg = colors.func },
 		["@tag.attribute"] = { fg = colors.identifier },
 		["@tag.delimiter"] = { fg = colors.bracket },
-		["@constructor"] = { fg = colors.operator },
+		["@constructor"] = { fg = colors.func },
 		["@constructor.lua"] = { fg = colors.bracket },
 		["@decorator"] = { fg = colors.preprocessor },
 	}
